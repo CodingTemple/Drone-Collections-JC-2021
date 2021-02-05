@@ -93,8 +93,6 @@ def create_drone(current_user_token):
 
     test_user = User.query.filter_by(email = 'joelc@codingtemple.com').first()
 
-    print(user_id == test_user.token)
-
     drone = Drone(name,price,model, user_id = user_id )
 
     db.session.add(drone)
