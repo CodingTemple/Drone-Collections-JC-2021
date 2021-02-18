@@ -21,6 +21,7 @@ app.config.from_object(Config)
 
 CORS(app)
 
+
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 login_manager = LoginManager(app)
@@ -29,5 +30,7 @@ login_manager.login_view = 'signin' # Specify what page to load for NON-AUTHED u
 oauth = OAuth(app)
 
 ma = Marshmallow(app)
+
+
 
 from drone_api import routes, models
